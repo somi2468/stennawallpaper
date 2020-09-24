@@ -1,0 +1,109 @@
+/* top slider */
+.a1{
+    position: absolute;
+          top: 0px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+  }
+  
+  .b{
+               top: 80%;
+              transform: translateY(-80%);
+              width: 50%;
+              left: 100px;
+  }
+  
+  .c{
+    font-size: 22px;
+    color: #202020;
+    letter-spacing: 2px;
+    font-family: Avenir-Light;
+    text-align: left;
+    font-weight: 600 !important;
+    line-height: 36px;
+  }
+  .d{
+    top: 55%;
+            left: auto;
+            transform: translateY(-70%);
+            right: 60px;
+  }
+  .e{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: Avenir-Light;
+    text-align: left;
+    font-weight: 600 !important;
+    line-height: 36px;
+  
+  }
+  
+  .f{
+    color: black;text-transform: none;
+    font-size: 20px;
+    font-family: Avenir-light!important;
+    line-height: 25px;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .g{
+    top: 55%;
+            left:5%;
+            transform: translateY(-55%);
+            width: 55%;
+  }
+  .h{
+              font-size: 22px;
+              line-height: 36px;
+              text-align: left;
+              font-weight: 600;
+  
+  }
+  
+  .k{
+    text-transform: none;
+              
+    font-size: 20px;
+    text-align: left;
+    font-family: Avenir-light!important;
+    line-height: 25px;
+    font-weight: 500;
+  }
+  
+  .j{
+    font-family: Avenir-light;
+          position: absolute;
+          top: 93%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          padding: 16px 30px;
+          box-sizing: border-box;
+          background: #e0f3f1;
+          font-size: 12px;
+          color: #202020;
+          letter-spacing: 2px;
+          text-align: center;
+  }
+
+  .carousel-caption{
+    color: #fff;
+    position: absolute;
+    top: 27%;
+    /*left: 82px;*/
+  }
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    bottom: 10%;
+    border-radius: 100%;
+    
+  background-color: black;
+    
+  }
+  .carousel-indicators .active{
+    background-color: #68cec8;
+  }
+  /* css of top bar completed */

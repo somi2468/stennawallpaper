@@ -1,0 +1,229 @@
+// source --> https://stenna.in/wp-content/themes/stenna/js/home.js 
+$(document).ready(function () {
+
+    // $('.home-banner-slider').owlCarousel({
+    //     animateOut: 'fadeOut',
+    //         items: 1,
+    //       lazyLoad: true,
+    //       autoplayHoverPause:false,
+    //       loop:true,
+    //       autoplay: true,
+    //       autoplayTimeout: 8000
+    //   });
+
+
+    $('.home-banner-slider').flexslider({
+        animation: "slide", 
+        directionNav: false,
+        controlNav: true,
+        slideshow: true,
+        maxItems: 1,
+        animationSpeed: 600,
+        slideshowSpeed: 3000,
+        itemMargin: 0
+    });
+
+
+
+
+    $('.homepage .banner .home-banner-slider .slides .item .image').height($(window).height());
+     $('.homepage .banner .home-banner-slider .slides .item .image').width($(window).width());
+     var videoWidth = 1920, videoHeight = 1080;
+        var newVideoHeightWRTWindowWidth = videoHeight * $(window).width() / videoWidth;
+        if (newVideoHeightWRTWindowWidth < $(window).height()) {
+            $('.homepage .banner .home-banner-slider .slides .item .image img').addClass('fit-height');
+        }
+
+
+    if ($(window).width() > 991) {
+        $('.why-wallpaper .wallpaper-right').height($('.why-wallpaper .wallpaper-left').height());
+        // $('.why-wallpaper .wallpaper-type .wallpaper-type-right').height(633);
+    }
+    if ($(window).width() > 991) {
+        $('.top-text-content .text').height($('.top-text-content .image-start').height());
+         $('.top-text-content .image-end').height($('.top-text-content .image-start').height());
+        
+    }
+    $('.item-head').click(function () {
+        if (!$(this).hasClass('active')) {
+            $('.item-desc').slideUp();
+            $(this).siblings().slideDown();
+            $('.item-head').removeClass('active');
+            $(this).addClass('active');
+        } else {
+            $('.item-desc').slideUp();
+            $('.item-head').removeClass('active');
+        }
+    });
+
+
+    $('.wallpaper-item.item:first-child .item-head').click();
+
+
+    $('.myths-slider').flexslider({
+        animation: "slide", 
+        directionNav: true,
+        controlNav: false,
+        slideshow: true,
+        maxItems: 3, 
+        itemWidth: 340,                  
+        itemMargin: 0
+    });
+    if ($(window).width() > 991) {
+    $('.why-wallpaper-slider').flexslider({
+        animation: "slide", 
+        directionNav: false,
+        controlNav: true,
+        slideshow: true,
+        maxItems: 1, 
+        itemWidth: 350,                 
+        itemMargin: 0
+    });
+    }
+    if ($(window).width() < 991) {
+        $('.why-wallpaper-slider').flexslider({
+            animation: "slide", 
+            directionNav: true,
+            controlNav: true,
+            slideshow: true,
+            maxItems: 1, 
+            itemWidth: 450,                 
+            itemMargin: 0
+        });
+    }
+
+
+
+    if($(window).width() < 767) {
+      $('.design-collection-slider').flexslider({
+        animation: "slide",
+        directionNav: true,
+        controlNav: false,
+        slideshow: true,
+        itemWidth: 300,
+        move: 1
+      });
+    } else if($(window).width() < 991) {
+
+       $('.design-collection-slider').flexslider({
+        animation: "slide",
+        directionNav: true,
+        controlNav: false,
+        slideshow: true,
+        itemWidth: 220,
+        itemMargin: 15
+      });
+    } else if($(window).width() < 1199) {
+
+      $('.design-collection-slider').flexslider({
+        animation: "slide",
+        directionNav: true,
+        controlNav: false,
+        slideshow: true,
+        itemWidth: 220,
+        itemMargin: 15
+      });
+
+    } else {
+        $('.design-collection-slider').flexslider({
+            animation: "slide",
+            directionNav: true,
+            controlNav: false,
+            slideshow: true,
+            itemWidth: 230,
+            itemMargin: 15,
+            maxItems: 5,
+            move: 1 
+        });
+    }
+
+});
+
+
+$("#arrow-down").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#scroll-up").offset().top - 80
+    }, 1000);
+    return false;
+});
+
+
+if($(window).width() < 767) {
+   $("#arrow-down").click(function () {
+       $('html, body').animate({
+           scrollTop: $("#scroll-up").offset().top - 0
+       }, 1000);
+       return false;
+   });
+}
+	 
+
+
+function openTab(evt, tabName) {
+
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+	    tabcontent[i].style.display = "none";
+	}
+	wallpaperItem = document.getElementsByClassName("wallpaper-item");
+	for (i = 0; i < wallpaperItem.length; i++) {
+	    wallpaperItem[i].className = wallpaperItem[i].className.replace(" active", "");
+	}
+	document.getElementById(tabName).style.display = "table";
+	evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+
+
+
+$(window).scroll(function () {
+ 	if ($('.homepage .its-time-for-wallpapers').offset().top - $(document).scrollTop() < 90) {
+        $('.homepage .header').css('position','fixed');
+    }
+    else {
+        $('.homepage .header').css('position','relative');
+    }
+ });
+
+
+/******************  TO SCROLL TO PARTICULAR DIV IN ANOTHER PAGE STARTS HERE *********************/
+    $(window).load(function () {
+        var scrollTo = localStorage.getItem('scrollTo');
+        var scrollToMargin = localStorage.getItem('scrollToMargin');
+        var tab = localStorage.getItem('tab');
+        if (scrollTo !== '') {
+            $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top - scrollToMargin - 15
+            }, 1000, function () {
+                localStorage.setItem('scrollTo', '');
+                localStorage.setItem('scrollToMargin', 0);
+                localStorage.setItem('tab', '');
+                $(tab).click();
+            });
+        }
+    });
+    
+     function scrollToSection(scrollTo, scrollToMargin, link, tab) {
+        localStorage.setItem('scrollTo', scrollTo);
+        localStorage.setItem('scrollToMargin', scrollToMargin);
+        localStorage.setItem('tab', tab);
+         
+        if (link !== '') {
+            setTimeout(function () {
+                window.location = link;
+            }, 50);
+        } else {
+            $('html, body').animate({
+                scrollTop: $(scrollTo).offset().top - scrollToMargin - 15
+            }, 2000, function () {
+                localStorage.setItem('scrollTo', '');
+                localStorage.setItem('scrollToMargin', 0);
+                localStorage.setItem('tab', '');
+                $(tab).click();
+            });
+            
+        }
+    }
+/******************  TO SCROLL TO PARTICULAR DIV IN ANOTHER PAGE ENDS HERE *********************/;

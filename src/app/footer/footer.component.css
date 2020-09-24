@@ -1,0 +1,26 @@
+.a{
+    background-color:#e4f3f1;height:5% ;padding: 45px 175px;
+      box-sizing: border-box;
+}
+
+.b{
+    font-family: 'Avenir-light'!important;
+    font-size: 12px;
+    color: #202020;
+    letter-spacing: 2.4px;
+    line-height: 22px;
+}
+
+
+
+.c{
+    font-family: 'Avenir-Book';
+      font-size: 12px;
+      color: #202020;
+      letter-spacing: 2.4px;
+      text-align: right;
+      line-height: 22px;
+      padding-top: 5px;
+      box-sizing: border-box;
+      font-weight: 400;
+}

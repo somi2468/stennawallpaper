@@ -1,0 +1,26 @@
+.a{
+    width: 130px;
+            float: left;
+            padding-top: 15px!important;
+}
+
+.b{
+    padding: 16px 30px;
+    box-sizing: border-box;
+    background: #7ACDC8;
+    font-family: Avenir-Heavy;
+    font-size: 14px;
+    color: #FFFFFF!important;
+    letter-spacing: 1.23px;
+    font-weight: 400;
+}
+
+.d{
+    color: black;
+}
+
+.header {
+    padding: 10px 16px;
+    box-sizing: border-box;
+    background-color: white;
+  }

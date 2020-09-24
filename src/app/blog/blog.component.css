@@ -1,0 +1,82 @@
+/* blog */
+.a{
+    font-family: Avenir-Light;
+    font-size: 28px;
+    color: #202020;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: normal;
+}
+.n{
+    width: 27rem;
+    border: 30px solid;
+    float: left;
+    margin: 30px 30px 30px 30px;
+
+}
+.p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:75ch;
+}
+
+.tu{padding: 40px;
+    float: left;
+    box-sizing: border-box;}
+.tt{
+font-family: Avenir-light!important;
+  font-size: 20px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  font-weight: normal!important;
+}
+.ts{font-weight: normal;
+    font-size: 20px;
+    max-height: 100px;
+    overflow: hidden;}
+
+    .i{width: 473px;
+        height: 200px;
+        margin-right: 0px;
+        float: left;
+        display: block;
+        }
+        
+
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 40%;
+        width: 100%;
+        text-align: center;
+      }
+
+.btu{
+    background-color: #7ACDC8;
+}
+
+    .overla {
+        position: absolute;
+        top: 49%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 52%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        cursor: pointer;
+        background: #7ACDC8;
+        background-color: rgba(122, 205, 200, 0.8);
+      }
+      
+      .sor:hover .overla {
+    opacity: 1;
+    }
+      

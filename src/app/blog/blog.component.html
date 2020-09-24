@@ -1,0 +1,58 @@
+<section>
+    <br>
+    
+  <br>
+    <h2 class="a">BLOGS</h2>
+  <br><br>
+    
+  
+      <div class="container-fluid">
+        <div class="row">
+          
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel slide" data-ride="carousel" id="slide">
+            <div class="carousel-inner">
+              
+        <div class="carousel-item active">
+          <div class="row">
+               <div *ngFor="let blog of blogdata">
+          <div class="card n" style="border: 30px solid #F8EEE1;float: left;">
+            <div class="card-body tu ">
+            <h2 class="card-text tt ">{{blog.Name}}</h2>
+            <p class="card-text ts p">{{blog.Description}}</p>
+             <br>
+             </div>
+             <div class="sor">
+             <img  [src]="blog.Mainimagepath" alt="First slide" class="img-fluid i"  data-interval="50" >
+             <div class="overla">
+              <div class="text">
+                <a class="nav-item nav-link active"[routerLink]="['./Bannerimage', blog.BlogID]">Learn More</a>
+              </div>
+            </div>
+             </div>
+          </div>    
+           </div>
+          </div>
+          </div>
+        
+            </div>
+             </div>
+             
+             </div>
+              
+             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span aria-hidden="true" style="background-color: #7ACDC8;width: 23%;height: 18%;margin-left: -77%;"><img src="assets/image/left.png" style="width: 60%;margin-top: 45%;"></span>
+              <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span aria-hidden="true" style="background-color: #7ACDC8;width: 23%;height: 18%;margin-right: -117%;"><img src="assets/image/right.png" style="width: 60%;margin-top: 45%;"></span>
+              <span class="sr-only">Next</span>
+              </a>
+            
+              
+        
+        
+  </div>
+</div>
+      
+    </section>

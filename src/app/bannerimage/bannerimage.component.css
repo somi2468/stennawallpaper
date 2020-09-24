@@ -1,0 +1,38 @@
+
+
+.bb{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 500px;
+    height: 550px;
+    margin-left: 5%;
+    border-radius: 5% 5% 5% 5%;
+}
+
+.h{
+    font-family: Avenir-Light;
+  font-size: 28px;
+  color:  beige;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: normal;
+  margin-top: 10%;
+}
+.tt{
+  font-family: Avenir-light!important;
+  color:  beige;
+  margin-top: 10%;
+    font-size: 20px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    font-weight: normal!important;
+  }
+  .ts{font-weight: normal;
+    color:  beige;
+    margin-top: 10%;
+      font-size: 20px;
+      max-height: 100px;
+      overflow: hidden;}
